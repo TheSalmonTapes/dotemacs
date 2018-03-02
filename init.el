@@ -65,9 +65,6 @@
   :hook (before-save . gofmt-before-save)
   :config (setq gofmt-command "goimports"))
 
-(use-package go-eldoc :after go-mode
-  :hook (go-mode . go-eldoc-setup))
-
 (use-package json-mode :mode "\\.json\\'")
 
 (use-package markdown-mode :mode "\\.md\\'")
