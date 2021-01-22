@@ -43,8 +43,11 @@
 (use-package yasnippet :defer t
   :init (yas-global-mode))
 
-(use-package flycheck :defer t
-  :init (global-flycheck-mode))
+;; This can be unbearably slow if editing files with lots of
+;; dependencies.
+;;
+;; (use-package flycheck :defer t
+;;   :init (global-flycheck-mode))
 
 (use-package company :defer t
   :init (global-company-mode)
@@ -64,6 +67,9 @@
   :bind ("M-." . godef-jump)
   :hook (before-save . gofmt-before-save)
   :config (setq gofmt-command "goimports"))
+
+(use-package magit
+  :bind ("M-b" . magit-blame-addition))
 
 (use-package json-mode :mode "\\.json\\'")
 
