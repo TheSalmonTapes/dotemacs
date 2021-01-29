@@ -29,6 +29,7 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (scroll-bar-mode -1)
+(fringe-mode -1)
 (delete-selection-mode t)
 (column-number-mode)
 (global-display-line-numbers-mode t)
