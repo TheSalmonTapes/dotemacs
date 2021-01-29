@@ -67,7 +67,8 @@
 (use-package helm
   :bind (("M-x" . helm-M-x)
 	 ("C-x C-f" . helm-find-files)
-	 ("C-x C-b" . helm-buffers-list)))
+	 ("C-x C-b" . helm-buffers-list)
+	 ("C-x b" . helm-bookmarks)))
 
 (use-package windmove :defer t
   :bind (("S-<left>" . windmove-left)
