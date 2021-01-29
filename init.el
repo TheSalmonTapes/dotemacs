@@ -57,6 +57,12 @@
   (exec-path-from-shell-copy-envs
    '("PATH" "GOPATH")))
 
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  (setq which-key-idle-delay 0.3))
+
 (use-package helm
   :bind (("M-x" . helm-M-x)
 	 ("C-x C-f" . helm-find-files)))
