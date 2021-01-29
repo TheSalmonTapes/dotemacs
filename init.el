@@ -10,22 +10,28 @@
 
 (eval-when-compile (require 'use-package))
 
-;; Key bindings
+;; Global key bindings
 
 (global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-;; Settings
+;; Global settings
 
 (setq
  use-package-always-ensure t
  column-number-mode t
  auto-save-default nil
  backup-inhibited t
- truncate-lines t)
+ truncate-lines t
+ inhibit-startup-message t)
 (show-paren-mode t)
 (menu-bar-mode -1)
 (tool-bar-mode -1)
+(tooltip-mode -1)
+(scroll-bar-mode -1)
 (delete-selection-mode t)
+(column-number-mode)
+(global-display-line-numbers-mode t)
 
 ;; Packages
 
