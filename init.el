@@ -33,6 +33,20 @@
 (column-number-mode)
 (global-display-line-numbers-mode t)
 
+;; Cosmetic packages
+
+(use-package all-the-icons) ; M-x all-the-icons-install fonts
+
+(use-package doom-modeline
+  :init (doom-modeline-mode 1))
+
+(use-package doom-themes
+  :config
+  (setq doom-themes-enable-bold t
+	doom-themes-enable-italic t)
+  (load-theme 'doom-one t)
+  (doom-themes-visual-bell-config))
+
 ;; Packages
 
 (use-package helm
