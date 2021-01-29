@@ -45,7 +45,8 @@
   (setq doom-themes-enable-bold t
 	doom-themes-enable-italic t)
   (load-theme 'doom-one t)
-  (doom-themes-visual-bell-config))
+  (doom-themes-visual-bell-config)
+  (doom-themes-org-config))
 
 ;; Packages
 
@@ -87,6 +88,11 @@
 
 (use-package magit
   :bind ("M-b" . magit-blame-addition))
+
+(use-package org
+  :bind (("C-c a" . org-agenda)
+	 ("C-c l" . org-store-link))
+  :config (setq org-log-done t))
 
 (use-package json-mode :mode "\\.json\\'")
 
