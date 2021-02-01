@@ -56,7 +56,7 @@
   :config
   (exec-path-from-shell-initialize)
   (exec-path-from-shell-copy-envs
-   '("PATH" "GOPATH")))
+   '("PATH" "GOPATH" "GOROOT")))
 
 (use-package which-key
   :init (which-key-mode)
