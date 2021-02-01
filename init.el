@@ -70,10 +70,6 @@
 	 ("C-x C-b" . helm-buffers-list)
 	 ("C-x b" . helm-bookmarks)))
 
-(use-package windmove :defer t
-  :bind (("S-<left>" . windmove-left)
-	 ("S-<right>" . windmove-right)))
-
 (use-package yasnippet :defer t
   :init (yas-global-mode))
 
